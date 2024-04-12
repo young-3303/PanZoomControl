@@ -28,10 +28,10 @@ class PanZoomControl {
   private bindEvents(): void {
     this.element.addEventListener('wheel', this.handleWheel);
     this.element.addEventListener('mousedown', this.handleMouseDown);
+    this.element.addEventListener('mouseleave', this.handleMouseUp)
     document.addEventListener('mousemove', this.handleMouseMove);
     document.addEventListener('mouseup', this.handleMouseUp);
   }
-
   private handleWheel = (event: WheelEvent): void => {
     event.preventDefault()
     const rect = this.element.getBoundingClientRect();
@@ -78,6 +78,7 @@ class PanZoomControl {
   public destroy(): void {
     this.element.removeEventListener('wheel', this.handleWheel);
     this.element.removeEventListener('mousedown', this.handleMouseDown);
+    this.element.removeEventListener('mouseleave', this.handleMouseUp)
     document.removeEventListener('mousemove', this.handleMouseMove);
     document.removeEventListener('mouseup', this.handleMouseUp);
   }
