@@ -1,0 +1,22 @@
+{
+  "name": "pan-zoom-control",
+  "author": "Young",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist/*"
+  ],
+  "homepage": "https://github.com/young-3303/PanZoomControl.git",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}

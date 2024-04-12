@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    /* Language and Environment */
+    "target": "ES2020",
+
+    /* Modules */
+    "module": "ESNext",
+    "moduleResolution": "Node",
+
+    /* Emit */
+    "declaration": true,
+    "outDir": "dist",
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+
+    /* Completeness */
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", "dist"]
+}

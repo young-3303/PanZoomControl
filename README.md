@@ -1,4 +1,4 @@
-# ZoomableDraggable
+# PanZoomControl
 
 ## 概览
 
