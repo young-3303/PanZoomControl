@@ -14,7 +14,28 @@
 
 ![image](https://github.com/young-3303/PanZoomControl/blob/main/public/gif/example.gif?raw=true)
 
-#### options参数：
+## 使用方式
+``` bash
+npm i PanZoomControl --save
+```
+``` typescript
+import PanZoomControl from 'PanZoomControl';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mydiv = document.getElementById('mydiv') as HTMLElement;
+  const container = document.getElementById('container') as HTMLElement;
+
+  const zoomDrag = new PanZoomControl(mydiv, container);
+  // 现在 `mydiv` 可在 `container` 内缩放和拖动。
+
+  // 之后清理：
+  // zoomDrag.destroy();
+});
+```
+
+
+
+#### options参数
 
 | 参数       | 说明                               | 类型          | 默认值 |
 | ---------- | ---------------------------------- | ------------- | :----: |
