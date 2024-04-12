@@ -23,7 +23,9 @@
     /* Completeness */
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist"
   },
   "include": ["./src"],
   "exclude": ["node_modules", "dist"]

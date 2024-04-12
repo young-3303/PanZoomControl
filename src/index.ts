@@ -1,4 +1,4 @@
-import {Options} from "./types";
+import type {Options} from "./types";
 
 class PanZoomControl {
   scale: number;
@@ -15,7 +15,7 @@ class PanZoomControl {
     this.container = options.container
     this.maximum = options.maximum
     this.minimum = options.minimum
-    this.deltaScale = options.deltaScale || 0.01
+    this.deltaScale = options.deltaScale || 0.1
     this.scale = 1;
     this.translate = { x: 0, y: 0 };
     this.start = { x: 0, y: 0 };
@@ -33,10 +33,11 @@ class PanZoomControl {
   }
 
   private handleWheel = (event: WheelEvent): void => {
+    event.preventDefault()
     const rect = this.element.getBoundingClientRect();
-    const deltaScale = event.deltaY > 0 ? 0.9 : 1.1;
-    const newScale = Math.min(Math.max(this.scale * deltaScale, this.minimum), this.maximum);
-
+    const deltaScale = (event.deltaY > 0 ? -1 : 1) * this.deltaScale;
+    // const newScale = Math.min(Math.max(this.scale * deltaScale, this.minimum), this.maximum);
+    const newScale = Math.min(Math.max(this.scale + deltaScale, this.minimum), this.maximum);
     const mouseX = event.clientX - rect.left;
     const mouseY = event.clientY - rect.top;
 
@@ -51,12 +52,14 @@ class PanZoomControl {
   };
 
   private handleMouseDown = (event: MouseEvent): void => {
+    event.preventDefault()
     this.start.x = event.clientX - this.translate.x;
     this.start.y = event.clientY - this.translate.y;
     PanZoomControl.dragging = true;
   };
 
   private handleMouseMove = (event: MouseEvent): void => {
+    event.preventDefault()
     if (!PanZoomControl.dragging) return;
     this.translate.x = event.clientX - this.start.x;
     this.translate.y = event.clientY - this.start.y;
@@ -79,4 +82,5 @@ class PanZoomControl {
     document.removeEventListener('mouseup', this.handleMouseUp);
   }
 }
+
 export default PanZoomControl
