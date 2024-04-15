@@ -16,7 +16,7 @@
 
 ## 使用方式
 ``` bash
-npm i PanZoomControl --save
+npm i pan-zoom-control --save
 ```
 ``` typescript
 import PanZoomControl from 'PanZoomControl';
