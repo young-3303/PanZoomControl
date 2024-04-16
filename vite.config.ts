@@ -10,7 +10,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'PanZoomControl',
       // the proper extensions will be added
-      fileName: (format) => format === 'umd' ? `PanZoomControl.${format}.js` : 'PanZoomControl.min.js',
+      fileName: (format) => format === 'umd' ? `PanZoomControl.${format}.cjs` : 'PanZoomControl.min.js',
       formats: ['iife', 'umd']
     },
     terserOptions: {
