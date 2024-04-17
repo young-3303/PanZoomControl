@@ -25,7 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const mydiv = document.getElementById('mydiv') as HTMLElement;
   const container = document.getElementById('container') as HTMLElement;
 
-  const zoomDrag = new PanZoomControl(mydiv, container);
+  const zoomDrag = new PanZoomControl({
+    scaleElement: mydiv;
+    container: container;
+    maximum: 0.2;
+    minimum: 6;
+    deltaScale: 0.2
+  });
   // 现在 `mydiv` 可在 `container` 内缩放和拖动。
 
   // 之后清理：

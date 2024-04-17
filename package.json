@@ -2,7 +2,7 @@
   "name": "pan-zoom-control",
   "author": "Young",
   "private": false,
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "types": "dist/index.d.ts",
   "main": "dist/PanZoomControl.umd.cjs",
