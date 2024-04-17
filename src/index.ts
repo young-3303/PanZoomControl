@@ -52,7 +52,6 @@ class PanZoomControl {
   };
 
   private handleMouseDown = (event: MouseEvent): void => {
-    event.preventDefault()
     this.start.x = event.clientX - this.translate.x;
     this.start.y = event.clientY - this.translate.y;
     PanZoomControl.dragging = true;
