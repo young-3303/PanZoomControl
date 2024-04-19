@@ -9,8 +9,10 @@
   "files": [
     "dist/types",
     "dist/index.d.ts",
-    "dist/PanZoomControl.umd.cjs"
+    "dist/PanZoomControl.umd.cjs",
+    "dist/PanZoomControl.min.js"
   ],
+  "unpkg": "dist/PanZoomControl.min.js",
   "homepage": "https://github.com/young-3303/PanZoomControl.git",
   "license": "MIT",
   "scripts": {
