@@ -2,7 +2,7 @@
   "name": "pan-zoom-control",
   "author": "Young",
   "private": false,
-  "version": "0.0.9",
+  "version": "1.0.0",
   "type": "module",
   "types": "dist/index.d.ts",
   "main": "dist/PanZoomControl.umd.cjs",
@@ -21,8 +21,13 @@
     "preview": "vite preview",
     "deploy": "npm run build && npm publish"
   },
-
-  "keywords": [ "zoom", "drag", "typescript", "control", "ui" ],
+  "keywords": [
+    "zoom",
+    "drag",
+    "typescript",
+    "control",
+    "ui"
+  ],
   "devDependencies": {
     "@types/node": "^20.12.7",
     "typescript": "^5.2.2",
